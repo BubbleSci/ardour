@@ -1,0 +1,27 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"COCOCO",
+    "selectedColor":"A8A8A8",
+    "borderStyle":"white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "商品界面"
+    },
+     {
+       "pagePath":"pages/logs/logs",
+       "text":"我的"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

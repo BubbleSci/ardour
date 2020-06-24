@@ -1,0 +1,7 @@
+<!--logs.wxml-->
+<view wx:for="{{logs}}" >
+  <block  wx:for-item="log">
+    <text>{{item.name}}</text>
+    <text>{{item.age}}</text>
+  </block>
+</view>

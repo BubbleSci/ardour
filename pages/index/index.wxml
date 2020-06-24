@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="btn">
+      <image src='pages/images/苹果图1.jpg'></image>
+      <!--<select id="aNum">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>-->
+   </view>
+  <view class="nav">
+      <image src='pages/images/香蕉图1.jpg'></image>
+   <select id="bNum">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+  </view>
+  <view class="nav">
+      <image src='pages/images/火龙果图1.jpg'></image>
+     <select id="dNum">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+  </view>
+</view> 
+<button bindtap="getNum">确定</button>
