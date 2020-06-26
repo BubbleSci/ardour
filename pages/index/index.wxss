@@ -25,10 +25,10 @@ nav{
   margin: 20rpx;
   border-radius: 50%;
 }
-btn{
+.btn{
 width: 60%;
 background: local;
 }
-btn image{
+.btn image{
   width: 100;
 }

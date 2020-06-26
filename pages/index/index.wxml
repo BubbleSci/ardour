@@ -1,34 +1,20 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="btn">
-      <image src='pages/images/苹果图1.jpg'></image>
-      <!--<select id="aNum">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-				</select>-->
+<!--<view class="container">-->
+  <view class='btn'>
+      <image src='images/apple.jpg' mode='widthFix'></image>
+			<text>选择您所需要的数量：</text>
+				<input type="number" bindinput="bindKeyInput" data-type="1"></input>
    </view>
-  <view class="nav">
-      <image src='pages/images/香蕉图1.jpg'></image>
-   <select id="bNum">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-				</select>
+
+  <view class="btn">
+      <image src='images/banana.jpg' mode='widthFix'></image>
+			<text>选择您所需要的数量：</text>
+				<input type="number" bindinput="bindKeyInput" data-type="2"></input>
   </view>
-  <view class="nav">
-      <image src='pages/images/火龙果图1.jpg'></image>
-     <select id="dNum">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-				</select>
+
+  <view class="btn">
+      <image src='images/dragon.jpg' mode ='widthFix'></image>
+			<text>选择您所需要的数量：</text>
+				<input type="number" bindinput="bindKeyInput" data-type="3"></input>
   </view>
-</view> 
-<button bindtap="getNum">确定</button>
+<button bindtap="tapLogin">确定</button>

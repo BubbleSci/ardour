@@ -3,13 +3,11 @@
 
 Page({
   data: {
-    logs: [{
-        name:'苹果',age:'aprise',
-        name:'香蕉',age:'bprise',
-        name:'火龙果',age:'dprise',
-        name:'西瓜',age:'xprise',
-      }
-    ]
+    list: [
+        {name:'苹果',age:'aprise'},
+        {name:'香蕉',age:'bprise'},
+        {name:'火龙果',age:'dprise'}
+      ]
   },
   // onLoad: function () {
   //   this.setData({

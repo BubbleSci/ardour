@@ -1,7 +1,6 @@
 <!--logs.wxml-->
-<view wx:for="{{logs}}" >
-  <block  wx:for-item="log">
-    <text>{{item.name}}</text>
-    <text>{{item.age}}</text>
-  </block>
+<text>您的订单</text>
+<view wx:for="{{list}}" >
+    <text>{{  item.name  }}</text>
+    <text>{{  item.age  }}</text>
 </view>

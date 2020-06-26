@@ -1,15 +1,43 @@
 //index.js
 //获取应用实例
-//const app = getApp()
+const app = getApp()
+var aprise, bprise, dprise
+
 Page({
-  getNum:function(){//这里的获取值和html不一样
-			// let appleNum = document.getElementById("aNum").value;
-			// let bananaNum = document.getElementById("bNum").value;
-      // let dragonNum = document.getElementById("dNum").value;
-      // let aprise = aNum*1;
-      // let bprise = bNum*5;
-      // let dprise = dNum*10;
-      // let total = aprise+bprise+dprise;
-      // console.log( total),
+  data:{
+      focous:false,
+      inputValue:''
+  },
+  bindKeyInput: function (e) {
+    this.setData({
+      inputValue: e.detail.value,
+    })
+    console.log(e)
+    switch(e.currentTarget.dataset.type){
+      case "1": 
+        aprise = e.detail.value*2
+        console.log(aprise)
+        break
+      case "2":
+        bprise = e.detail.value*5
+        console.log(bprise)
+        break
+      case "3":
+        dprise = e.detail.value*10
+        console.log(dprise)
+        break
+    }
+  },
+  tapLogin:function(){
+    wx.navigateTo({
+      url: '/pages/logs/logs',
+      
+    })
   }
-      })
+  }
+  // getNum:function(){
+  // var total = aprise +bprise +dprise ;
+  // console.log (total);
+  // }
+  // }
+      )
