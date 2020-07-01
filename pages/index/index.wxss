@@ -30,5 +30,5 @@ width: 60%;
 background: local;
 }
 .btn image{
-  width: 100;
+  width: 100%;
 }

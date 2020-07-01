@@ -17,4 +17,6 @@
 			<text>选择您所需要的数量：</text>
 				<input type="number" bindinput="bindKeyInput" data-type="3"></input>
   </view>
+  <button bindtap="getNum">总计</button>
+  <!-- <text>您所需要付款{{total}}</text> -->
 <button bindtap="tapLogin">确定</button>

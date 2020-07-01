@@ -1,12 +1,11 @@
 //index.js
 //获取应用实例
 const app = getApp()
-var aprise, bprise, dprise
+var aprise, bprise, dprise, total
 
 Page({
   data:{
-      focous:false,
-      inputValue:''
+      inputValue:'',
   },
   bindKeyInput: function (e) {
     this.setData({
@@ -28,16 +27,18 @@ Page({
         break
     }
   },
+   getNum: function(){
+  total = aprise +bprise +dprise ;
+    console.log (total);
+  },
+
   tapLogin:function(){
     wx.navigateTo({
-      url: '/pages/logs/logs',
+      url: '/pages/logs/logs?total='+ total,
       
     })
   }
-  }
-  // getNum:function(){
-  // var total = aprise +bprise +dprise ;
-  // console.log (total);
-  // }
+   },
+ 
   // }
       )

@@ -1,6 +1,7 @@
 <!--logs.wxml-->
-<text>您的订单</text>
-<view wx:for="{{list}}" >
+<text>您的需要付款</text>
+<text>{{sum}}元</text>
+<!-- <view wx:for="{{list}}" >
     <text>{{  item.name  }}</text>
     <text>{{  item.age  }}</text>
-</view>
+</view> -->
