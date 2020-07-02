@@ -1,0 +1,14 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "2.1.0-alpha.10",
+  "message": "chore(release): publish",
+  "command": {
+    "publish": {
+      "commitHooks": false,
+      "conventionalCommits": true,
+      "message": "chore(release): publish %s"
+    }
+  }
+}

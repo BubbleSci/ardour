@@ -1,0 +1,18 @@
+{
+  "name": "@wepy/use-intercept",
+  "version": "2.1.0-alpha.10",
+  "description": "wepy intercept",
+  "main": "/dist/index.js",
+  "scripts": {
+    "test": "mocha --require esm ./test/**/*"
+  },
+  "author": {
+    "name": "Gcaufy",
+    "email": "gcaufy@gmail.com"
+  },
+  "license": "MIT",
+  "readme": "ERROR: No README data found!",
+  "_id": "@wepy/use-intercept@2.0.4",
+  "_commitid": "2fd06e4",
+  "gitHead": "5a25776457360bbbbc54a4d059f6bc7c032d5df3"
+}
