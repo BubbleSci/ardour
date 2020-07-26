@@ -1,0 +1,38 @@
+{
+	"description": "A WePY project",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"enhance": false,
+		"postcss": false,
+		"preloadBackgroundData": false,
+		"minified": false,
+		"newFeature": false,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"appid": "wx548eefd296fc87a5",
+	"projectname": "shopping",
+	"miniprogramRoot": "weapp/",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"libVersion": "2.12.0",
+	"condition": {}
+}

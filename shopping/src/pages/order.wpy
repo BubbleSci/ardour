@@ -1,0 +1,49 @@
+<style lang="less">
+</style>
+
+<template>
+  <Tabs tabs="{{tabs}}" bindtabsItemChange="handChange">1</Tabs>
+</template>
+
+<script>
+import wepy from '@wepy/core';
+
+wepy.page({
+  data: {
+    tabs: [
+      {
+        id: 0,
+        value: '全部',
+        isActive: true
+      },
+      {
+        id: 1,
+        value: '待付款',
+        isActive: false
+      },
+      {
+        id: 2,
+        value: '待发货',
+        isActive: false
+      },
+      {
+        id: 3,
+        value: '退货/退款',
+        isActive: false
+      }
+    ]
+  },
+
+
+  onShow(options) {}
+});
+</script>
+
+<config>
+{
+ "usingComponents": {
+    "Tabs": "../components/Tab"
+  },
+  "navigationBarTitleText": "订单查询"
+}
+</config>

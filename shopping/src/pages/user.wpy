@@ -1,0 +1,201 @@
+<style lang="less">
+page {
+  background-color: #edece8;
+}
+.user_info_wrap {
+  position: relative;
+  height: 45vh;
+  overflow: hidden;
+  background-color: var(--themeColor);
+}
+.user_info_wrap .user_img_wrap {
+  position: relative;
+}
+.user_info_wrap .user_img_wrap .user_bg {
+  filter: blur(10rpx);
+  height: 50vh;
+}
+.user_info_wrap .user_img_wrap .user_info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user_info_wrap .user_img_wrap .user_info .user_icon {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+}
+.user_info_wrap .user_img_wrap .user_info .user_name {
+  margin-top: 40rpx;
+  color: white;
+  font-size: 32rpx;
+}
+.user_info_wrap .user_btn {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+  border: 1rpx solid pink;
+  color: pink;
+  font-size: 38rpx;
+  padding: 20rpx;
+  position: absolute;
+  border-radius: 10rpx;
+}
+.user_content {
+  position: relative;
+}
+.user_content .user_main {
+  color: #666;
+  padding-bottom: 100rpx;
+  position: absolute;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  top: -40rpx;
+}
+.user_content .user_main .history_wrap {
+  background-color: white;
+  display: flex;
+}
+
+.user_content .order_wrap {
+  background-color: white;
+  margin-top: 30rpx;
+}
+.user_content .order_wrap .order_title {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #edece8;
+}
+.user_content .order_wrap .order_content {
+  height: 100rpx;
+  display: flex;
+}
+.user_content .order_wrap .order_content navigator {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  padding: 15rpx 0;
+}
+.user_content .order_wrap .order_content navigator .iconfont {
+  font-size: 40rpx;
+  color: var(--themeColor);
+}
+.user_content .address_wrap {
+  margin-top: 30rpx;
+  background-color: white;
+  padding: 20rpx;
+}
+.user_content .app_info_wrap {
+  margin-top: 30rpx;
+  background-color: white;
+}
+.user_content .app_info_wrap .app_info_item {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.user_content .app_info_wrap .app_info_content {
+  display: flex;
+  justify-content: space-between;
+}
+.user_content .recoomend_wrap {
+  margin-top: 30rpx;
+  background-color: white;
+  padding: 20rpx;
+}
+</style>
+
+<template>
+  <view class="user_info_wrap">
+    <view wx:if="{{userInfo.avatarUrl}}" class="user_img_wrap">
+      <image class="user_bg" src="{{userInfo.avatarUrl}}"> </image>
+      <view class="user_info">
+        <image class="user_icon" src="{{userInfo.avatarUrl}}"> </image>
+        <view class="user_name">{{ userInfo.nickName }} </view>
+      </view>
+    </view>
+
+    <view wx:else class="user_btn">
+      <navigator url="/pages/login">登录</navigator>
+    </view>
+  </view>
+  <view class="user_content">
+    <!-- 历史足迹 -->
+    <view class="user_main">
+      <view class="history_wrap">
+          <view >收藏的店铺</view>
+          <view>收藏的商品</view>
+          <view>关注的商品</view>
+          <view>我的足迹</view>
+      </view>
+      <view class="order_wrap">
+        <view class="order_title">我的订单</view>
+        <view class="order_content">
+          <navigator url="/pages/order">
+            <view class="iconfont icon-ding_dan"></view>
+            <view class="order_name">全部订单</view>
+          </navigator>
+          <navigator url="/pages/order">
+            <view class="iconfont icon-fukuantongzhi"></view>
+            <view class="order_name">待付款</view>
+          </navigator>
+          <navigator url="/pages/order">
+            <view class="iconfont icon-receipt-address"></view>
+            <view class="order_name">待收货</view>
+          </navigator>
+          <navigator>
+            <view class="iconfont icon-tuihuotuikuan_dianpu"></view>
+            <view class="order_name">退款/退货</view>
+          </navigator>
+        </view>
+      </view>
+      <!-- 收货地址管理 -->
+      <view class="address_wrap">
+        收货地址管理
+      </view>
+      <!-- 应用信息相关 -->
+      <view class="app_info_wrap">
+        <view class="app_info_item app_info_content ">
+          <text>联系客服</text>
+          <text>400-823823</text>
+        </view>
+        <view class="app_info_item">意见反馈</view>
+        <view class="app_info_item">关于我们</view>
+      </view>
+      <!-- 把应用推荐 -->
+      <view class="recoomend_wrap">
+        把应用推荐给其他人
+      </view>
+    </view>
+
+    <!-- 我的订单 -->
+  </view>
+</template>
+
+<script>
+import wepy from '@wepy/core';
+
+wepy.page({
+  data: {
+    userInfo: {},
+    collectNum: 0
+  },
+
+  onShow: function(options) {
+    const userInfo = wx.getStorageSync('userInfo');
+    const collect = wx.getStorageSync('collect');
+    const collectNum = collect.length;
+  }
+});
+</script>
+
+<config>
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    
+  }
+}
+</config>

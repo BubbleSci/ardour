@@ -1,0 +1,50 @@
+<style lang = "less">
+page {
+  height: 100%;
+}
+.cates {
+  height: 100%;
+}
+
+</style>
+
+<template>
+  <view class="cates">
+    <SearchInput></SearchInput>
+  </view>
+</template>
+
+<script>
+import wepy from '@wepy/core';
+
+wepy.page({
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    leftMenuList: [],
+    rightContent: [],
+    currentIndex: 0,
+    scrollTop: 0
+  },
+
+  // 接口返回数据
+  Cates: [],
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function(options) {
+    const Cates = wx.getStorageSync('cates');
+  }
+});
+</script>
+
+<config>
+{
+  "usingComponents": {
+    "SearchInput": "../components/SearchInput"
+  },
+  "navigationBarTitleText": "商品分类"
+}
+</config>

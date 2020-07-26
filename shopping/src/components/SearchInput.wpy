@@ -1,0 +1,58 @@
+<style lang="less">
+ .search_input {
+    height: 90rpx;
+    padding: 10rpx;
+    background-color: var(--themeColor) ;
+}
+
+.search_input navigator {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15rpx;
+    color: #666;
+}
+</style>
+
+<template>
+  <view class="search_input">
+    <navigator url="../pages/search" open-type="navigate">搜索</navigator>
+</view>
+</template>
+
+<script>
+  import wepy from '@wepy/core'
+  
+  wepy.component({
+  
+  /**
+   * 组件的属性列表
+   */
+  properties: {
+
+  },
+
+  /**
+   * 组件的初始数据
+   */
+  data: {
+
+  },
+
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+
+  }
+})
+</script>
+
+<config>
+{
+  "component": true,
+  "usingComponents": {}
+}
+</config>

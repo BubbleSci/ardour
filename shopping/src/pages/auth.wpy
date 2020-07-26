@@ -1,0 +1,43 @@
+<style lang = "less">
+button {
+  width: 100%;
+  margin-top: 40rpx;
+}
+</style>
+
+<template>
+  <button
+    open-type="getUserInfo"
+    plain="{{true}}"
+    bindgetuserinfo="handleGetUserInfo"
+    type="primary"
+  >
+    获取授权
+  </button>
+</template>
+
+<script>
+import wepy from '@wepy/core';
+
+wepy.page({
+  // 获取用户信息
+  async handleGetUserInfo(e) {
+    const { encryptedData, rawData, iv, signature } = e.detail;
+    const { code } = await login();
+    const loginParams = { encryptedData, rawData, iv, signature, code };
+    const res = await request({
+      url: '/users/wxlogin',
+      data: loginParams,
+      methods: 'post'
+    });
+    console.log(res);
+  }
+});
+</script>
+
+<config>
+{
+    "usingComponents": {},
+    "navigationBarTitleText": "支付授权"
+}
+</config>

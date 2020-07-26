@@ -1,0 +1,106 @@
+<style lang="less">
+page {
+  padding-bottom: 90rpx;
+}
+
+.cart_content .cart_title {
+  padding: 20rpx;
+  font-size: 36rpx;
+  color: var(--themeColor);
+  border-bottom: 1px solid currentColor;
+  border-top: 1px solid currentColor;
+}
+
+.footer_tool {
+  display: flex;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+
+.footer_tool .order_pay_wrap {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--themeColor);
+  font-size: 32rpx;
+  font-weight: 600;
+  color: white;
+}
+</style>
+
+<template>
+  <view class="receive_address_row">
+    <view>
+      <button type="primary" plain="{{true}}">
+        获取收获地址
+      </button>
+    </view>
+  </view>
+
+  <!-- 购物车内容 -->
+  <view class="cart_content">
+    <view class="cart_title"> 购物车</view>
+    <view class="cart_main">
+      <block>
+        <view class="cart_item" wx:for="{{cart}}" wx:key="goods_id">
+          <!-- 单选框 -->
+          <view class="cart_chk_wrap">
+            <checkbox-group
+              bindchange="handleItemChange"
+              data-id="{{item.goods_id}}"
+            >
+              <checkbox checked="{{item.checked}}"></checkbox>
+            </checkbox-group>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 底部工具栏 -->
+  <view class="footer_tool">
+    <!-- 全选框 -->
+    <view class="all_chk_wrap">
+    
+        <checkbox>全选</checkbox>
+
+    </view>
+    <!-- 总价格 -->
+    <view class="total_price_wrap">
+      <view class="total_price">
+        合计：
+      </view>
+      <view>
+        包含运费
+      </view>
+    </view>
+    <!-- 结算 -->
+    <button>结算</button>
+  </view>
+</template>
+
+<script>
+import wepy from '@wepy/core';
+
+wepy.page({
+
+  data: {
+    address: {},
+    cart: [],
+    
+  },
+});
+</script>
+
+<config>
+{
+    "usingComponents": {},
+    "navigationBarTitleText": "购物车"
+}
+</config>

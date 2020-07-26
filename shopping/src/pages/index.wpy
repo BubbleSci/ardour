@@ -1,0 +1,56 @@
+<style lang="less">
+.index_swiper {
+  swiper {
+    width: 750rpx;
+    height: 340rpx;
+
+    image {
+      width: 100%;
+    }
+  }
+}
+
+.index_cate {
+  display: flex;
+  navigator {
+    padding: 20rpx;
+    flex: 1;
+    image {
+      width: 100%;
+    }
+  }
+}
+</style>
+
+
+<template>
+  <view class="index">
+    <!-- 搜索框 -->
+    <SearchInput></SearchInput>
+  </view>
+</template>
+
+<script>
+import wepy from '@wepy/core';
+
+wepy.page({
+  data: {
+    //轮播图
+    swiperList: [],
+    //导航数组
+    catesList: [],
+    floorList: []
+  },
+
+  onLoad: function() {}
+});
+</script>
+
+<config>
+{
+    "usingComponents": {
+      "SearchInput": "../components/SearchInput"
+    },
+    "navigationBarTitleText": "买你所想"
+}
+</config>

@@ -1,0 +1,56 @@
+<style lang = "less">
+page {
+  background-color: #dedede;
+  padding: 20rpx;
+}
+.search_row {
+  height: 60rpx;
+  display: flex;
+}
+.search_row input {
+  background-color: #fff;
+  flex: 1;
+  height: 100%;
+  padding-left: 20rpx;
+}
+.search_row button {
+  width: 110rpx;
+  padding: 0;
+  height: 100%;
+  font-size: 28rpx;
+  margin: 0 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+
+<template>
+  
+<view class="search_row">
+ <input placeholder="请输入关键字" bindinput = "handleInput"/>
+   <button>搜索</button>
+</view>
+<view class="search_content">
+
+</view>
+
+
+</template>
+
+<script>
+import wepy from '@wepy/core';
+
+wepy.page({
+  data: {
+    goods: []
+  },
+});
+</script>
+
+<config>
+{
+  "usingComponents": {},
+    "navigationBarTitleText": "搜索中心"
+}
+</config>
